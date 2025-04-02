@@ -1,1 +1,13 @@
-<p>form works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="name">Nombre:</label>
+  <input id="name" formControlName="name" />
+  
+  <!-- Mostrar errores solo si el campo ha sido tocado -->
+  <div *ngIf="form.controls['name'].invalid && form.controls['name'].touched">
+    <small *ngIf="form.controls['name'].hasError('required')">El nombre es obligatorio.</small>
+    <small *ngIf="form.controls['name'].hasError('minlength')">Debe tener al menos 3 caracteres.</small>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Enviar</button>
+</form>
+

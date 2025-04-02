@@ -20,7 +20,9 @@ export class FormComponent {
 
   onSubmit() {
     if (this.form.valid) {
-      console.log('Formulario enviado', this.form.value);
+      console.log('Formulario enviado:', this.form.value);
+    } else {
+      console.log('El formulario contiene errores.');
     }
   }
 }
