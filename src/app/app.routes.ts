@@ -4,5 +4,5 @@ import { FormComponent } from './form/form.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // Página de inicio
-  { path: 'form', component: FormComponent } // Página del formulario
+  { path: 'form', component: FormComponent }, // Página del formulario
 ];
